@@ -10,6 +10,7 @@ Welcome to Anton's Mindstorms Docs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   mpy-robot-tools/docs/index
 
 
 Indices and tables
