@@ -11,7 +11,7 @@ Welcome to Anton's Mindstorms Docs's documentation!
    :caption: Contents:
 
    mpy-robot-tools/docs/index
-
+   hardware
 
 Indices and tables
 ==================
