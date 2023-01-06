@@ -1,8 +1,8 @@
 .. currentmodule:: hardware
 .. _hardware:
 
-Hardware
-========
+Hardware Discription
+====================
 
 LMS ESP32 Pinout
 ----------------
