@@ -10,8 +10,9 @@ Welcome to Anton's Mindstorms Docs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   mpy-robot-tools/docs/index
-   hardware/hardware
+   Software
+   Hardware
+   Hardware/LMS-ESP32/hardware
 
 Indices and tables
 ==================
