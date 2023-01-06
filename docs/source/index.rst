@@ -10,7 +10,7 @@ Welcome to Anton's Mindstorms Docs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   Software
+   Software/mpy-robot-tools/docs/index.rst
    Hardware
    Hardware/LMS-ESP32/hardware
 
