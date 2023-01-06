@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashing the LMS-ESP32 board &mdash; Anton&#39;s Mindstorms Docs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Anton's Mindstorms Docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Software/mpy-robot-tools/docs/index.html">Welcome to mpy-robot-tools!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LMS-ESP32/hardware.html">Hardware Discription</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Anton's Mindstorms Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Flashing the LMS-ESP32 board</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Hardware/LMS-ESP8266/Flashing-the-ESP-boards.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="flashing-the-lms-esp32-board">
+<h1>Flashing the LMS-ESP32 board<a class="headerlink" href="#flashing-the-lms-esp32-board" title="Permalink to this heading"></a></h1>
+<p>The latest firmware for this board can be downloaded from here:
+<a class="reference external" href="https://github.com/antonvh/UartRemote/tree/master/MicroPython/ESP32">firmware_ESP32_ULAB_LVGL_SPIRAM_&lt;timestamp&gt;.bin</a>.
+This is a version that supports the extra SP-RAM and has the latest
+UartRemote library integrated in its firmware. Furthermore, the
+<a class="reference external" href="https://github.com/v923z/micropython-ulab.git">ulab</a> and
+<a class="reference external" href="https://github.com/lvgl/lv_micropython">LVGL</a> libraries are also
+integrated. The firmware name shows the build timestamp.</p>
+<section id="use-the-flash-tool">
+<h2>Use the flash tool<a class="headerlink" href="#use-the-flash-tool" title="Permalink to this heading"></a></h2>
+<p>Using the integrated USB UART on the ESP32 board, you can easily flash a
+new firmware version on the board using the <code class="docutils literal notranslate"><span class="pre">flash32.py</span></code> scripts in
+this github:
+<a class="reference external" href="https://github.com/antonvh/flash-esp">github.com/antonvh/slah-esp</a>.</p>
+</section>
+</section>
+<section id="flashing-the-esp-i2c-wifi-board">
+<h1>Flashing the esp-i2c-wifi board<a class="headerlink" href="#flashing-the-esp-i2c-wifi-board" title="Permalink to this heading"></a></h1>
+<p>The boards ship flashed, but you can reflash them with your own
+operating system or version of Micropython. There are two options: via a
+Mac or PC with a USB FTDI cable or via an EV3 brick and a serial port.
+Depending on the hardware you have laying around, choose the best option
+for you.</p>
+<section id="micropython-with-integrated-uartremote-library">
+<h2>Micropython with integrated UartRemote library<a class="headerlink" href="#micropython-with-integrated-uartremote-library" title="Permalink to this heading"></a></h2>
+<p>For your convenience we compiled a micropython firmware with the
+<a class="reference external" href="https://github.com/antonvh/LMS-uart-esp/tree/main/Libraries/UartRemote">UartRemote</a>
+Library compiled as a frozen module. There is no need to upload the
+library seperately. The firmware can be found here
+<a class="reference external" href="https://github.com/antonvh/LMS-uart-esp/blob/main/Libraries/UartRemote/MicroPython/ESP8266">micropython_v1.16_uartremote.bin</a></p>
+</section>
+<section id="ev3-brick-and-serial-port">
+<h2>EV3 brick and serial port<a class="headerlink" href="#ev3-brick-and-serial-port" title="Permalink to this heading"></a></h2>
+<p>Make sure your EV3 brick runs the <a class="reference external" href="https://ev3dev.org">latest version
+ev3dev</a>. On that website there are very good
+guides for setting up ev3dev and Visual Studio Code. Use these guides to
+connect your brick over USB or Bluetooth. Once that is done, open a
+terminal to your EV3 in VS Code and get started. Make sure you have
+enabled network sharing on your laptop and created a working internet
+network connection from the screen of your EV3. You will know that you
+have an internet connection if your brick shows a valid IP number in the
+top left of the screen. Guides for Mac and PC are on
+<a class="reference external" href="https://ev3dev.org">ev3dev.org</a></p>
+<ol class="arabic simple">
+<li><p>To open an ssh terminal, right-click your brick in the EV3DEV DEVICE
+BROWSER in VS Code and select ‘open ssh terminal’ <img alt="opening an ssh terminal" src="Hardware/LMS-ESP8266/images/open-ssh-terminal.png" /></p></li>
+<li><p>Download esptool.py and a micropython binary to your home directory
+on the ev3 brick.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span><span class="n">J</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">espressif</span><span class="o">/</span><span class="n">esptool</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">esptool</span><span class="o">.</span><span class="n">py</span>
+<span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span><span class="n">J</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">micropython</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">firmware</span><span class="o">/</span><span class="n">esp8266</span><span class="o">-</span><span class="mi">20210618</span><span class="o">-</span><span class="n">v1</span><span class="mf">.16</span><span class="o">.</span><span class="n">bin</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Enable a serial port. The easiest way to do this is to change the
+port mode via brickman on the screen of your EV3 brick. <img alt="device browser" src="Hardware/LMS-ESP8266/images/device-browser.png" /> <img alt="ports" src="Hardware/LMS-ESP8266/images/ports-in1.png" /> <img alt="mode" src="Hardware/LMS-ESP8266/images/set-mode.png" /> <img alt="other uart" src="Hardware/LMS-ESP8266/images/other-uart.png" /></p></li>
+<li><p>Connect the esp board with the breakt to port 1 of the EV3 brick.
+Make sure GND on the breakout board (top left) is aligned with GND on
+the ESP Board.</p></li>
+<li><p>Put the esp in bootmode by holding the BOOT button while pressing and
+releasing the RESET button</p></li>
+<li><p>Erase the esp flash like this:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">esptool</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">tty_ev3</span><span class="o">-</span><span class="n">ports</span>\<span class="p">:</span><span class="n">in1</span>  <span class="n">erase_flash</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Put the ESP in boot mode again, like in step 5. The write the flash
+like this:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">esptool</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">tty_ev3</span><span class="o">-</span><span class="n">ports</span>\<span class="p">:</span><span class="n">in1</span> <span class="o">--</span><span class="n">baud</span> <span class="mi">460800</span> <span class="n">write_flash</span> <span class="o">--</span><span class="n">flash_size</span><span class="o">=</span><span class="n">detect</span> <span class="mi">0</span> <span class="n">esp8266</span><span class="o">-</span><span class="mi">20210618</span><span class="o">-</span><span class="n">v1</span><span class="mf">.16</span><span class="o">.</span><span class="n">bin</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Reset the ESP by cycling the power or pressing RESET.</p></li>
+<li><p>Check if you get the ESP MicroPython REPL over UART:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">screen</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">tty_ev3</span><span class="o">-</span><span class="n">ports</span>\<span class="p">:</span><span class="n">in1</span> <span class="mi">115200</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>You should get <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> if you press enter. Try typing <code class="docutils literal notranslate"><span class="pre">1+1</span></code> (and
+enter) to see if the esp can do math! Now might be a good time to
+<a class="reference external" href="Configure-webrepl">configure the WebREPL</a> for easy access to
+your ESP.</p></li>
+</ol>
+<p>press ctr-a and the k to exit screen.</p>
+</section>
+<section id="ftdi-cable-and-mac-pc-linux">
+<h2>FTDI Cable and Mac/PC/Linux<a class="headerlink" href="#ftdi-cable-and-mac-pc-linux" title="Permalink to this heading"></a></h2>
+<p>Using an FTDI USB serial convertor you can flash the ESP8266 with new
+firmware.</p>
+<p><img alt="FTDI FT232 module" src="Hardware/LMS-ESP8266/images/FTDI232.jpeg" /></p>
+<p>The new ESP board has an FTDI compatible ‘wobble’ connector. This allows
+you to insert the FTDI board without soldering the pins because due to
+the friction, the pins will make contact.</p>
+<p><img alt="ftdi connected to esp" src="Hardware/LMS-ESP8266/images/ftdi_esp.jpeg" /></p>
+<p>For the older type of board, you need some jumper wires to connect the
+<code class="docutils literal notranslate"><span class="pre">GND</span></code>, <code class="docutils literal notranslate"><span class="pre">+3.3V</span></code>, <code class="docutils literal notranslate"><span class="pre">TX</span></code> and <code class="docutils literal notranslate"><span class="pre">RX</span></code>. Note that the <code class="docutils literal notranslate"><span class="pre">TX</span></code> and <code class="docutils literal notranslate"><span class="pre">RX</span></code>
+pins need to be cross-connected (TX of FTDI to RX of ESP and vice
+versa). Also ascertain that the jumper on the FTDI board is placed to
+the 3.3V pin, as all logic of the ESP8266 is 3.3V. 5V logic signals will
+cause damage to the ESP8266 board!</p>
+<p>There is an automated flashing script that does everything here:
+<a class="reference external" href="https://github.com/antonvh/flash-esp">https://github.com/antonvh/flash-esp</a>
+We also have a
+<a class="reference external" href="https://github.com/antonvh/LMS-uart-esp/tree/main/Libraries/UartRemote/MicroPython/ESP8266#readme">esp_flash_config.py</a>
+that will help you flash MicroPython to the ESP board and configure
+WebREPL and Wifi in MicroPython.</p>
+<p>If you want to do it manually, this is what you type in the terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">pyserial</span>
+<span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span><span class="n">J</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">espressif</span><span class="o">/</span><span class="n">esptool</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">esptool</span><span class="o">.</span><span class="n">py</span>
+<span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="o">-</span><span class="n">J</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">micropython</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">resources</span><span class="o">/</span><span class="n">firmware</span><span class="o">/</span><span class="n">esp8266</span><span class="o">-</span><span class="mi">20210618</span><span class="o">-</span><span class="n">v1</span><span class="mf">.16</span><span class="o">.</span><span class="n">bin</span>
+<span class="n">python3</span> <span class="n">esptool</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span><span class="o">.</span><span class="n">usbserial</span><span class="o">-</span><span class="n">AH0692NU</span>  <span class="n">erase_flash</span>
+</pre></div>
+</div>
+<p>Now press reset on the board, while holding the boot button. Note that
+you should probably change the /dev/ path in the last line, depending on
+your system.</p>
+<p>Then go on:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">esptool</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">port</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span><span class="o">.</span><span class="n">usbserial</span><span class="o">-</span><span class="n">AH0692NU</span> <span class="o">--</span><span class="n">baud</span> <span class="mi">460800</span> <span class="n">write_flash</span> <span class="o">--</span><span class="n">flash_size</span><span class="o">=</span><span class="n">detect</span> <span class="mi">0</span> <span class="n">esp8266</span><span class="o">-</span><span class="mi">20210618</span><span class="o">-</span><span class="n">v1</span><span class="mf">.16</span><span class="o">.</span><span class="n">bin</span>
+</pre></div>
+</div>
+<p>Press reset again, this time without the boot button pressed. Then go
+on:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">screen</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">cu</span><span class="o">.</span><span class="n">usbserial</span><span class="o">-</span><span class="n">AH0692NU</span>
+</pre></div>
+</div>
+<p>Hit return until you see &gt;&gt;&gt;. Then: <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">webrepl_setup</span></code> and follow
+instructions. Press ctrl-a and then k to quit <code class="docutils literal notranslate"><span class="pre">screen</span></code>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Anton, Ste7an.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

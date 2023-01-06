@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arduino &mdash; Anton&#39;s Mindstorms Docs  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Anton's Mindstorms Docs
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Software/mpy-robot-tools/docs/index.html">Welcome to mpy-robot-tools!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../LMS-ESP32/hardware.html">Hardware Discription</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Anton's Mindstorms Docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Arduino</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/Hardware/LMS-ESP8266/Arduino-environment.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="arduino">
+<h1>Arduino<a class="headerlink" href="#arduino" title="Permalink to this heading"></a></h1>
+<p>Although <a class="reference external" href="https://arduino.cc">Arduino</a> is well known from its Atmel
+AVR based hardware platform, the Integrated Development Environment
+(IDE) is an envirmonment well suited for beginning C developers. The
+Arduino IDE has been ported to the ESP8266 and ESP32 platforms. ESP
+users can now leverage from libraries supporting a vast amount of
+hardware devices such as sensors and displays.</p>
+<p>Compared to the deployment of MicroPython on the ESP8266, Arduino will
+allow for faster and more complex programs, as the resources that are
+used are less demanding. One drawback of using Arduino, is that the
+program needs to be compiled and flashed on the ESP before it can run.
+The development cycle will take longer</p>
+<section id="esp8266-support">
+<h2>ESP8266 support<a class="headerlink" href="#esp8266-support" title="Permalink to this heading"></a></h2>
+<p>ESP8266 users should install the Arduino support packages for ESP8266 in
+the Arduino IDE. This proces is described here:
+(<a class="reference external" href="https://arduino-esp8266.readthedocs.io/en/latest/">https://arduino-esp8266.readthedocs.io/en/latest/</a>).</p>
+</section>
+<section id="installing-ota-support">
+<h2>Installing OTA support<a class="headerlink" href="#installing-ota-support" title="Permalink to this heading"></a></h2>
+<p>The ESP8266 only has a single full bidirectional UART that normaly is
+used for flashing firmare. In a development cycle using Arduino, every
+iteration in the software makes flashing the firmware neccesary. Because
+in our application, the ESP 8266 UART can not be used for flashing new
+firmware, as it is connected to a Lego hub, we will need Over The Air
+(OTA) programming. The OTA is not present in the bootloader of the
+ESP8266. Consequently, each firmware will need to incorporate the OTA
+support in order to use it for the next programming cycle.</p>
+</section>
+<section id="debugging-arduino-code">
+<h2>Debugging Arduino code<a class="headerlink" href="#debugging-arduino-code" title="Permalink to this heading"></a></h2>
+<section id="through-uart1">
+<h3>Through UART1<a class="headerlink" href="#through-uart1" title="Permalink to this heading"></a></h3>
+<p>The ESP8266 has two hardware UARTs build in. However, the RX port of the
+second UART is shared with pins for driving the Flash memeory, and can
+not be used. The transmit pin is mapped on GPIO2 (please be aware that
+the inter blue led on the ESP12F module is also mapped on GPIO2,
+therefore, driving the LED from your program, prevents using the 2nd TX
+UART port. Hook up an FTDI serial to USB concverter with its RX port
+connected to GPIO2 and connect the GND of the FTDI to the GND of the esp
+board. Below you will find an example of how to use the second UART for
+debugging puposes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Serial1</span><span class="o">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">)</span>
+
+
+<span class="n">Serial1</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">&quot;This is debugging output shown on the second UART on pin GPIO2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="through-remotedebug">
+<h3>Through RemoteDebug<a class="headerlink" href="#through-remotedebug" title="Permalink to this heading"></a></h3>
+<p>In the MicroPython environment, we use the WebREPL to provide debugging
+and interactive prototyping. In the Arduino environment non such thing
+exists. However, the github project
+(<a class="reference external" href="https://github.com/JoaoLopesF/RemoteDebug">https://github.com/JoaoLopesF/RemoteDebug</a>)
+a Wifi-based debugging tool is provided. RemoteDebug allows for remote
+debugging through Telnet or through a <a class="reference external" href="https://github.com/JoaoLopesF/RemoteDebugApp">web-based debugging
+app</a>.</p>
+<p>The RemoteDebug library can be installed from the Library Manager.
+Search for remotedebug.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Anton, Ste7an.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

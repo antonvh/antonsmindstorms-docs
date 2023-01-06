@@ -1,3 +1,8 @@
+Troubleshooting ESP32
+=====================
+
+Below you will find some ideas and procedures to validate or find error in the hardware of your LMS-ESP32 board.
+
 Check headers connections after soldering
 -----------------------------------------
 
@@ -25,9 +30,7 @@ LEGO connection port
 -  connect the RX and TX pin of the 3x2 lego header using a
    female-female jump cable as shown below and press ENTER.
 
-.. raw:: html
-
-    <img src="images/test_LEGO_RX_TX.png" width="400" height="400">
+|test_LEGO_RX_TX|
 
 This should result in the following output:
 
@@ -92,9 +95,7 @@ you will see the following:
 -  connect the RX pin of the LEGO port with the GPIO pin you want to
    test. In the picture below we want to test e.g. GPIO15
 
-.. raw:: html
-
-    <img src="images/test_GPIO15.png" width="400" height="400">
+|test_gpio15|
 
 -  press ENTER
 
@@ -179,9 +180,7 @@ in China. They usually do a good job, but in rare cases we noticed that
 some solder pads are not correctly soldered. Usually by re-heating the
 pad with a solder iron solves the problem.
 
-.. raw:: html
-
-    <img src="images/lms_esp32_pinout.jpg" width="500" height="500">
+|lms_esp32_pinout|
 
 We do a quality check on all the connections from the ESP32 to the
 different headers by performing the ``test_lms_esp32.py`` program that
@@ -189,3 +188,9 @@ comes pre-flashed on the board. Furthermore, we check the power supply
 and the USB port.
 
 .. |esp32_pinout| image:: images/Espressif_ESP32-WROVER_Pinout.png
+.. |lms_esp32_pinout| image:: images/lms_esp32_pinout.jpg
+   :width: 500
+.. |test_gpio15| image:: images/test_GPIO15.png
+   :width: 400
+.. |test_LEGO_RX_TX| image:: images/test_LEGO_RX_TX.png
+   :width: 400
