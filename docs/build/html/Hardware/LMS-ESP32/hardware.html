@@ -20,7 +20,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Welcome to mpy-robot-tools!" href="../../Software/mpy-robot-tools/docs/index.html" /> 
+    <link rel="next" title="LMS ESP32 Pinout" href="pinout.html" />
+    <link rel="prev" title="Hardware documentation" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -28,7 +29,8 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Anton's Mindstorms Docs
+            <a href="../../index.html">
+            <img src="../../_static/logo_small.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -40,16 +42,27 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../Software/mpy-robot-tools/docs/index.html">Welcome to mpy-robot-tools!</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Hardware Discription</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#lms-esp32-pinout">LMS ESP32 Pinout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#usb-connector">USB connector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#power-supply-of-the-board">Power supply of the board</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gpio-header">GPIO header</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#i2c-grove-connector">I2C Grove connector</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#i2s-microphone">I2S Microphone</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#buck-converter">Buck converter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Software/index.html">Software documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Hardware documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#lms-esp32">LMS-ESP32</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Hardware Discription</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb-connector">USB connector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#power-supply-of-the-board">Power supply of the board</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gpio-header">GPIO header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i2c-grove-connector">I2C Grove connector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i2s-microphone">I2S Microphone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#buck-converter">Buck converter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pinout.html">LMS ESP32 Pinout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Assembling-the-esp32-board.html">Assembling the ESP32-wifi board</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Troubeshooting-your-LMS-ESP32-board.html">Troubleshooting ESP32</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#opemmv-uart-convertor-board">OpemMV Uart Convertor board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#distance-sensor-breakout-board">Distance Sensor Breakout board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#lms-esp8266">LMS-ESP8266</a></li>
 </ul>
 </li>
 </ul>
@@ -68,6 +81,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Hardware documentation</a></li>
       <li class="breadcrumb-item active">Hardware Discription</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/Hardware/LMS-ESP32/hardware.rst.txt" rel="nofollow"> View page source</a>
@@ -80,11 +94,6 @@
              
   <section id="hardware-discription">
 <span id="hardware"></span><h1>Hardware Discription<a class="headerlink" href="#hardware-discription" title="Permalink to this heading"></a></h1>
-<section id="lms-esp32-pinout">
-<h2>LMS ESP32 Pinout<a class="headerlink" href="#lms-esp32-pinout" title="Permalink to this heading"></a></h2>
-<img alt="LMS_esp32 Pinout" src="../../_images/lms_esp32_pinout.jpg" />
-<p>The graph above shows the pinout of the LMS ESP32 expansion board. All ESP32 GPIO pins are indicated. Where they have a specific functions, that is idicated by an extra pin label.</p>
-</section>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p>In the picture below an overviwe of the hardware components of the LMS-ESP32 board is given.</p>
@@ -124,7 +133,7 @@ This button is connected to the reset signal of the ESP32</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The pinout and maping on ESP32 GPIO pins can be found in the <a class="reference internal" href="pinout.html#pinout"><span class="std std-ref">Pinout</span></a>.</p>
+<p>The pinout and maping on ESP32 GPIO pins can be found in the <span class="xref std std-ref">Pinout</span>.</p>
 </div>
 </section>
 <section id="usb-connector">
@@ -180,7 +189,8 @@ This button is connected to the reset signal of the ESP32</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../../Software/mpy-robot-tools/docs/index.html" class="btn btn-neutral float-left" title="Welcome to mpy-robot-tools!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Hardware documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pinout.html" class="btn btn-neutral float-right" title="LMS ESP32 Pinout" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

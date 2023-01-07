@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Check headers connections after soldering &mdash; Anton&#39;s Mindstorms Docs  documentation</title>
+  <title>Troubleshooting ESP32 &mdash; Anton&#39;s Mindstorms Docs  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,7 +19,9 @@
         <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="LMS Uart Converter board" href="../OpenMV%20convertor%20board/Assembling-the-converter-board.html" />
+    <link rel="prev" title="Assembling the ESP32-wifi board" href="Assembling-the-esp32-board.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -27,7 +29,8 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../index.html" class="icon icon-home"> Anton's Mindstorms Docs
+            <a href="../../index.html">
+            <img src="../../_static/logo_small.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -38,9 +41,30 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../Software/mpy-robot-tools/docs/index.html">Welcome to mpy-robot-tools!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hardware.html">Hardware Discription</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Software/index.html">Software documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Hardware documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#lms-esp32">LMS-ESP32</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="hardware.html">Hardware Discription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Assembling-the-esp32-board.html">Assembling the ESP32-wifi board</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Troubleshooting ESP32</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#check-headers-connections-after-soldering">Check headers connections after soldering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lego-connection-port">LEGO connection port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i2c-port">I2C port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gpio-header">GPIO header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#i2c-port-1">I2C port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#micropohone-header">micropohone header</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#buck-converter">buck converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pre-soldering-check">Pre soldering check</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#opemmv-uart-convertor-board">OpemMV Uart Convertor board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#distance-sensor-breakout-board">Distance Sensor Breakout board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#lms-esp8266">LMS-ESP8266</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -57,7 +81,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Check headers connections after soldering</li>
+          <li class="breadcrumb-item"><a href="../index.html">Hardware documentation</a></li>
+      <li class="breadcrumb-item active">Troubleshooting ESP32</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/Hardware/LMS-ESP32/Troubeshooting-your-LMS-ESP32-board.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -67,8 +92,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="check-headers-connections-after-soldering">
-<h1>Check headers connections after soldering<a class="headerlink" href="#check-headers-connections-after-soldering" title="Permalink to this heading"></a></h1>
+  <section id="troubleshooting-esp32">
+<h1>Troubleshooting ESP32<a class="headerlink" href="#troubleshooting-esp32" title="Permalink to this heading"></a></h1>
+<p>Below you will find some ideas and procedures to validate or find error in the hardware of your LMS-ESP32 board.</p>
+<section id="check-headers-connections-after-soldering">
+<h2>Check headers connections after soldering<a class="headerlink" href="#check-headers-connections-after-soldering" title="Permalink to this heading"></a></h2>
 <p>Tools needed:</p>
 <ul class="simple">
 <li><p>a multi meter, preferable with an audible continuity check (it beeps
@@ -81,7 +109,7 @@ this check before you solder the microphone and the buck convertor on
 the board, otherwise access to some pins on the ESP32 may be blocked.</p>
 </section>
 <section id="lego-connection-port">
-<h1>LEGO connection port<a class="headerlink" href="#lego-connection-port" title="Permalink to this heading"></a></h1>
+<h2>LEGO connection port<a class="headerlink" href="#lego-connection-port" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>start e REPL prompt and perform the following commands</p></li>
 </ul>
@@ -93,7 +121,8 @@ the board, otherwise access to some pins on the ESP32 may be blocked.</p>
 <li><p>connect the RX and TX pin of the 3x2 lego header using a
 female-female jump cable as shown below and press ENTER.</p></li>
 </ul>
-<img src="images/test_LEGO_RX_TX.png" width="400" height="400"><p>This should result in the following output:</p>
+<p><a class="reference internal" href="../../_images/test_LEGO_RX_TX.png"><img alt="test_LEGO_RX_TX" src="../../_images/test_LEGO_RX_TX.png" style="width: 400px;" /></a></p>
+<p>This should result in the following output:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[*] Connect RX and TX pins of LEGO port.
 [?] Press ENTER to start LEGO port check.
 [*] Lego port UART OK
@@ -107,7 +136,7 @@ connection, reheat the solder pads on the LEGO connector with a
 soldering iron.</p>
 </section>
 <section id="i2c-port">
-<h1>I2C port<a class="headerlink" href="#i2c-port" title="Permalink to this heading"></a></h1>
+<h2>I2C port<a class="headerlink" href="#i2c-port" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Connect an i2c device to the Grove’s port</p></li>
 <li><p>start a REPL prompt and perform the following commands</p></li>
@@ -126,7 +155,7 @@ soldering iron.</p>
 i2c address(es) of your i2c device.</p>
 </section>
 <section id="gpio-header">
-<h1>GPIO header<a class="headerlink" href="#gpio-header" title="Permalink to this heading"></a></h1>
+<h2>GPIO header<a class="headerlink" href="#gpio-header" title="Permalink to this heading"></a></h2>
 <p>Once you convinced yourself that the LEGO port is properly working we
 will use the RX pin of the LEGO port to check connections of the GPIO
 header and I2C Grove’s header.</p>
@@ -148,7 +177,8 @@ header and I2C Grove’s header.</p>
 <li><p>connect the RX pin of the LEGO port with the GPIO pin you want to
 test. In the picture below we want to test e.g. GPIO15</p></li>
 </ul>
-<img src="images/test_GPIO15.png" width="400" height="400"><ul class="simple">
+<p><a class="reference internal" href="../../_images/test_GPIO15.png"><img alt="test_gpio15" src="../../_images/test_GPIO15.png" style="width: 400px;" /></a></p>
+<ul class="simple">
 <li><p>press ENTER</p></li>
 </ul>
 <p>The script will show every 0.5 seconds the state of the GPIO pins in the
@@ -174,7 +204,7 @@ following</p>
 <p>where the state of GPIO15 is now <code class="docutils literal notranslate"><span class="pre">[1]</span></code></p>
 </section>
 <section id="i2c-port-1">
-<span id="id1"></span><h1>I2C port<a class="headerlink" href="#i2c-port-1" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h2>I2C port<a class="headerlink" href="#i2c-port-1" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Connect an i2c device to the Grove’s port</p></li>
 <li><p>start a REPL prompt and perform the follwing commands</p></li>
@@ -193,15 +223,15 @@ following</p>
 i2c address(es) of your i2c device.</p>
 </section>
 <section id="micropohone-header">
-<h1>micropohone header<a class="headerlink" href="#micropohone-header" title="Permalink to this heading"></a></h1>
+<h2>micropohone header<a class="headerlink" href="#micropohone-header" title="Permalink to this heading"></a></h2>
 </section>
 <section id="buck-converter">
-<h1>buck converter<a class="headerlink" href="#buck-converter" title="Permalink to this heading"></a></h1>
+<h2>buck converter<a class="headerlink" href="#buck-converter" title="Permalink to this heading"></a></h2>
 </section>
 <section id="pre-soldering-check">
-<h1>Pre soldering check<a class="headerlink" href="#pre-soldering-check" title="Permalink to this heading"></a></h1>
+<h2>Pre soldering check<a class="headerlink" href="#pre-soldering-check" title="Permalink to this heading"></a></h2>
 <section id="power-supply-usb-port">
-<span id="id2"></span><h2>Power supply / USB port<a class="headerlink" href="#power-supply-usb-port" title="Permalink to this heading"></a></h2>
+<span id="id2"></span><h3>Power supply / USB port<a class="headerlink" href="#power-supply-usb-port" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>Plug in the USB connector to a PC.</p></li>
 <li><p>Check wether the power LED is lighted</p></li>
@@ -211,23 +241,28 @@ putty, or thonny), and look for the MicroPython REPL prompt.</p></li>
 </ul>
 </section>
 <section id="header-connections-check">
-<h2>Header connections check<a class="headerlink" href="#header-connections-check" title="Permalink to this heading"></a></h2>
-<p><img alt="esp32_pinout" src="Hardware/LMS-ESP32/images/Espressif_ESP32-WROVER_Pinout.png" /></p>
+<h3>Header connections check<a class="headerlink" href="#header-connections-check" title="Permalink to this heading"></a></h3>
+<p><img alt="esp32_pinout" src="../../_images/Espressif_ESP32-WROVER_Pinout.png" /></p>
 <p>The Surface Mount Technology (SMT) assembly has been performed by JLCPCB
 in China. They usually do a good job, but in rare cases we noticed that
 some solder pads are not correctly soldered. Usually by re-heating the
 pad with a solder iron solves the problem.</p>
-<img src="images/lms_esp32_pinout.jpg" width="500" height="500"><p>We do a quality check on all the connections from the ESP32 to the
+<p><a class="reference internal" href="../../_images/lms_esp32_pinout.jpg"><img alt="lms_esp32_pinout" src="../../_images/lms_esp32_pinout.jpg" style="width: 500px;" /></a></p>
+<p>We do a quality check on all the connections from the ESP32 to the
 different headers by performing the <code class="docutils literal notranslate"><span class="pre">test_lms_esp32.py</span></code> program that
 comes pre-flashed on the board. Furthermore, we check the power supply
 and the USB port.</p>
+</section>
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Assembling-the-esp32-board.html" class="btn btn-neutral float-left" title="Assembling the ESP32-wifi board" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../OpenMV%20convertor%20board/Assembling-the-converter-board.html" class="btn btn-neutral float-right" title="LMS Uart Converter board" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
