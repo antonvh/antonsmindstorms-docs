@@ -1,4 +1,4 @@
-`ulab``-library
+`ulab`-library
 ===============
 
 `ulab` is a numpy-like array manipulation library for MicroPython and CircuitPython. The module is written in native C, 
