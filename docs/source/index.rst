@@ -16,10 +16,15 @@ Welcome to Anton's Mindstorms Docs's documentation!
 .. toctree::
    :maxdepth: 1
    :caption: Hardware
-   
+
    Hardware/index.rst
    
-
+.. toctree::
+   :maxdepth: 1
+   :caption: Firmware
+   
+   Firmware/index.rst
+   
 Indices and tables
 ------------------
 

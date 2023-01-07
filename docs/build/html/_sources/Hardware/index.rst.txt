@@ -1,4 +1,3 @@
-.. _hardware_docs:
 
 LMS-ESP32
 =========

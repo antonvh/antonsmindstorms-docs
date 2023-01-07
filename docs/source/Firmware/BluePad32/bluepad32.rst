@@ -1,8 +1,5 @@
-BluePad32 for Lego robot
-========================
-
 Precompiled binary
-------------------
+==================
 
 The file ``bluepad32_firmware.bin`` contains the precompiled binary that
 can be flashed on the LMD-ESP32 board using this commands:
@@ -22,7 +19,7 @@ controller are incremented by one. By pressing the right button on the
 robot activates the rumble of the controller.
 
 Installation of ESP-IDF
------------------------
+=======================
 
 Install esp-idf as described here
 `https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/#get-started-get-esp-idf <https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/#get-started-get-esp-idf>`__
@@ -73,7 +70,7 @@ Build the full project with included extra files:
 manually from ``files_xxxx`` to the project directory**
 
 Set-up of IDF-ESP32-Arduino with BluePad32 and UartRemote
----------------------------------------------------------
+=========================================================
 
 Quick-start with this project
 `https://github.com/ricardoquesada/bluepad32/blob/main/docs/plat_arduino.md <https://github.com/ricardoquesada/bluepad32/blob/main/docs/plat_arduino.md>`__
@@ -132,8 +129,8 @@ firmware!
 
 exit monitor with ctl+]
 
-On Lego Spike Prime or Mindstorms Robot Inventor
-------------------------------------------------
+BluePad32 with Lego Spike Prime or Mindstorms Robot Inventor
+============================================================
 
 to setup a remote see here
 `https://github.com/ricardoquesada/bluepad32/blob/main/docs/supported_gamepads.md <https://github.com/ricardoquesada/bluepad32/blob/main/docs/supported_gamepads.md>`__
@@ -157,7 +154,7 @@ like you would your Arduino/main for example you could add
 details
 
 Add Wifi AP
-~~~~~~~~~~~
+-----------
 
 The following requires advanced use with ``idf.py menuconfig`` to
 increse the memory space available in the build process.
@@ -209,7 +206,7 @@ edit arduino_main.cpp with the following:
 once this is modified ``idf.py clean`` and ``idf.py build``
 
 Add your 3rd party Arduino libraries:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------
 
 To include 3rd party Arduino libraries in your project, you have to:
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Micropython robot tools &mdash; Anton&#39;s Mindstorms Docs  documentation</title>
+  <title>Installation &mdash; Anton&#39;s Mindstorms Docs  documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
@@ -21,7 +21,7 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Hardware documentation" href="../../../Hardware/index.html" />
+    <link rel="next" title="LMS-ESP32" href="../../../Hardware/index.html" />
     <link rel="prev" title="Welcome to UartRemote documentation!" href="../../UartRemote/index.html" /> 
 </head>
 
@@ -41,23 +41,44 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Software</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Software documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../index.html#serialtalk">SerialTalk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../index.html#uartremote">UartRemote</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#mpy-robot-tools">MPY Robot Tools</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Micropython robot tools</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#overview-of-the-libraries">Overview of the libraries</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#to-do">To Do</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">SerialTalk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html#uartremote">UartRemote</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html#mpy-robot-tools">MPY Robot Tools</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#uninstall">Uninstall</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#overview-of-the-libraries">Overview of the libraries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#motor-sync-py">motor_sync.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#light-py">light.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bt-py">bt.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rc-py">rc.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rctrl-plus-py">rctrl_plus.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyhuskylens-py">pyhuskylens.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#helpers-py">helpers.py</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-uart-library-uartremote-py">Remote UART library: uartremote.py</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#to-do">To Do</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stubs">Stubs</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../Hardware/index.html">Hardware documentation</a></li>
+<p class="caption" role="heading"><span class="caption-text">Hardware</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Hardware/index.html">LMS-ESP32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Hardware/index.html#opemmv-uart-convertor-board">OpemMV Uart Convertor board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Hardware/index.html#distance-sensor-breakout-board">Distance Sensor Breakout board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Hardware/index.html#lms-esp8266">LMS-ESP8266</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Firmware</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Firmware/index.html">Micropython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Firmware/index.html#bluepad32">BluePad32</a></li>
 </ul>
 
         </div>
@@ -74,8 +95,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="../../index.html">Software documentation</a></li>
-      <li class="breadcrumb-item active">Micropython robot tools</li>
+          <li class="breadcrumb-item"><a href="../../index.html">SerialTalk</a></li>
+      <li class="breadcrumb-item active">Installation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../_sources/Software/mpy-robot-tools/docs/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -85,16 +106,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="micropython-robot-tools">
-<h1>Micropython robot tools<a class="headerlink" href="#micropython-robot-tools" title="Permalink to this heading"></a></h1>
-<p>This is a collection of classes and methods that help you to animate
-robots. They are specifically aimed at LEGO MINDSTORMS and SPIKE Prime
-robots, although the classes are abstract enough to be useful elsewhere.
-The functionality is documented inside the code. Here are just the main
-usages. For in-depth articles see my blog on
-<a class="reference external" href="https://antonsmindstorms.com">antonsmindstorms.com</a>.</p>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
 <ol class="arabic simple">
 <li><p>Copy the code from the <a class="reference external" href="Installer/install_mpy_robot_tools.py">install
 script</a> (<a class="reference external" href="https://github.blog/changelog/2021-09-20-quickly-copy-the-contents-of-a-file-to-the-clipboard/">click the Copy raw
@@ -113,7 +126,7 @@ the update the Hub will be in a “big square” for waiting for update just
 long press the center button and power cycle the hub to reconect to the
 lego app, it won’t ask a second time to update in the instance.</p>
 <section id="uninstall">
-<h3>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading"></a></h3>
+<h2>Uninstall<a class="headerlink" href="#uninstall" title="Permalink to this heading"></a></h2>
 <p>To uninstall remove the directory out of the /projects folder using a
 script, or something like ThonnyIDE File manager.</p>
 <p>To factory reset your hub to factory settings, using LEGO app, press the
@@ -125,9 +138,9 @@ recovered!</p>
 </section>
 </section>
 <section id="overview-of-the-libraries">
-<h2>Overview of the libraries<a class="headerlink" href="#overview-of-the-libraries" title="Permalink to this heading"></a></h2>
+<h1>Overview of the libraries<a class="headerlink" href="#overview-of-the-libraries" title="Permalink to this heading"></a></h1>
 <section id="motor-sync-py">
-<h3>motor_sync.py<a class="headerlink" href="#motor-sync-py" title="Permalink to this heading"></a></h3>
+<h2>motor_sync.py<a class="headerlink" href="#motor-sync-py" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>AMHTimer() - This is a timer class that returns milliseconds by
 default.</p></li>
@@ -138,14 +151,14 @@ functions for use in the Mechanism Class</p></li>
 </ul>
 </section>
 <section id="light-py">
-<h3>light.py<a class="headerlink" href="#light-py" title="Permalink to this heading"></a></h3>
+<h2>light.py<a class="headerlink" href="#light-py" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>image_99(int) - Returns a 5x5 matrix display hub.Image to show
 numbers up to 99 in one screen.</p></li>
 </ul>
 </section>
 <section id="bt-py">
-<h3>bt.py<a class="headerlink" href="#bt-py" title="Permalink to this heading"></a></h3>
+<h2>bt.py<a class="headerlink" href="#bt-py" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>BLEHandler() - Base Bluetooth Low Energy handler</p></li>
 <li><p>UARTCentral() - Connects to UARTPeripheral and implements read() and
@@ -177,7 +190,7 @@ of them:</p>
 </div>
 </section>
 <section id="rc-py">
-<h3>rc.py<a class="headerlink" href="#rc-py" title="Permalink to this heading"></a></h3>
+<h2>rc.py<a class="headerlink" href="#rc-py" title="Permalink to this heading"></a></h2>
 <ul>
 <li><p>Use the <a class="reference external" href="https://play.google.com/store/apps/details?id=com.antonsmindstorms.mindstormsrc">MINDSTORMS Ble RC Anroid
 app</a>
@@ -204,7 +217,7 @@ Rod</a></p></li>
 </ul>
 </section>
 <section id="rctrl-plus-py">
-<h3>rctrl_plus.py<a class="headerlink" href="#rctrl-plus-py" title="Permalink to this heading"></a></h3>
+<h2>rctrl_plus.py<a class="headerlink" href="#rctrl-plus-py" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>SmartHub() - Connects to a Technic smart hub and is able to control
 connected devices and read the states of the IMU and connected
@@ -212,7 +225,7 @@ motors.</p></li>
 </ul>
 </section>
 <section id="pyhuskylens-py">
-<h3>pyhuskylens.py<a class="headerlink" href="#pyhuskylens-py" title="Permalink to this heading"></a></h3>
+<h2>pyhuskylens.py<a class="headerlink" href="#pyhuskylens-py" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>HuskyLens() - <a class="reference external" href="https://github.com/antonvh/LEGO-HuskyLenslib">Connect to
 Huskylens</a> over a
@@ -222,7 +235,7 @@ higher or lower numbers.</p></li>
 </ul>
 </section>
 <section id="helpers-py">
-<h3>helpers.py<a class="headerlink" href="#helpers-py" title="Permalink to this heading"></a></h3>
+<h2>helpers.py<a class="headerlink" href="#helpers-py" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>clamp_int(n) - returns an an int between -100 and 100, clamping
 higher or lower numbers.</p></li>
@@ -231,7 +244,7 @@ Returns a number scaled to a different range of numbers</p></li>
 </ul>
 </section>
 <section id="remote-uart-library-uartremote-py">
-<h3>Remote UART library: uartremote.py<a class="headerlink" href="#remote-uart-library-uartremote-py" title="Permalink to this heading"></a></h3>
+<h2>Remote UART library: uartremote.py<a class="headerlink" href="#remote-uart-library-uartremote-py" title="Permalink to this heading"></a></h2>
 <p>NOTE: This is temporary. In the future I hope to replace with
 <a class="reference external" href="https://github.com/antonvh/SerialTalk">serialtalk</a>. It’s the same
 idea but it also works over bluetooth and websockets. This is a library
@@ -253,17 +266,16 @@ library.</a></p>
 </section>
 </section>
 <section id="to-do">
-<h2>To Do<a class="headerlink" href="#to-do" title="Permalink to this heading"></a></h2>
+<h1>To Do<a class="headerlink" href="#to-do" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>Please fork and help out this project by adding documentation. Could
 be docstrings, README or tutorials.</p></li>
 </ul>
 <section id="stubs">
-<h3>Stubs<a class="headerlink" href="#stubs" title="Permalink to this heading"></a></h3>
+<h2>Stubs<a class="headerlink" href="#stubs" title="Permalink to this heading"></a></h2>
 <p>For programming convenience in VS Code I would love to collect stubs of
 all LEGO hub libraries. I’ve been looking into micropython-stubber but
 it didn’t work for me.</p>
-</section>
 </section>
 </section>
 
@@ -272,7 +284,7 @@ it didn’t work for me.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../../UartRemote/index.html" class="btn btn-neutral float-left" title="Welcome to UartRemote documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../../Hardware/index.html" class="btn btn-neutral float-right" title="Hardware documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../../../Hardware/index.html" class="btn btn-neutral float-right" title="LMS-ESP32" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
