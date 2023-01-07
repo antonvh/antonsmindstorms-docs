@@ -1,12 +1,7 @@
 .. _hardware_docs:
 
-Hardware documentation
-======================
-
-Hhere you will find documentation about the following hardware baords:
-
 LMS-ESP32
----------
+=========
 
 |Esp32 wifi board|
 
@@ -20,7 +15,7 @@ LMS-ESP32
    
 
 OpemMV Uart Convertor board
----------------------------
+===========================
 
 |OpenMV breakout|
 
@@ -30,17 +25,17 @@ OpemMV Uart Convertor board
    OpenMV convertor board/Assembling-the-converter-board.rst
 
 Distance Sensor Breakout board
------------------------------
+==============================
 
 |distance sensor breakout|
 
 .. toctree::
    :maxdepth: 1
-   
+
    Distance Sensor Breakout Board/Assembling-the-distance-sensor-breakout.rst
 
 LMS-ESP8266
------------
+===========
 
 |Esp8266 wifi board|
 

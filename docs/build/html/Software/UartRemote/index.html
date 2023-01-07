@@ -7,6 +7,7 @@
   <title>Welcome to UartRemote documentation! &mdash; Anton&#39;s Mindstorms Docs  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -40,40 +41,67 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Software</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Software documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../index.html#serialtalk">SerialTalk</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#uartremote">UartRemote</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Welcome to UartRemote documentation!</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#uartremote-library">UartRemote Library</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#platforms">Platforms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#constructor">Constructor</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#helper-methods">Helper Methods</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#remote-module-loading">Remote module loading</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#how-to-remotely-load-a-module">How to remotely load a module?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">SerialTalk</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html#uartremote">UartRemote</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Welcome to UartRemote documentation!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uartremote-library">UartRemote Library</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#platforms">Platforms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constructor">Constructor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote"><code class="docutils literal notranslate"><span class="pre">UartRemote</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#protocol">Protocol</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#packet-format">Packet format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.flush"><code class="docutils literal notranslate"><span class="pre">UartRemote.flush()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.available"><code class="docutils literal notranslate"><span class="pre">UartRemote.available()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.send_command"><code class="docutils literal notranslate"><span class="pre">UartRemote.send_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.receive_command"><code class="docutils literal notranslate"><span class="pre">UartRemote.receive_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.call"><code class="docutils literal notranslate"><span class="pre">UartRemote.call()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.process_uart"><code class="docutils literal notranslate"><span class="pre">UartRemote.process_uart()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.reply_command"><code class="docutils literal notranslate"><span class="pre">UartRemote.reply_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.loop"><code class="docutils literal notranslate"><span class="pre">UartRemote.loop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.add_module"><code class="docutils literal notranslate"><span class="pre">UartRemote.add_module()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.add_command"><code class="docutils literal notranslate"><span class="pre">UartRemote.add_command()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.get_remote_commands"><code class="docutils literal notranslate"><span class="pre">UartRemote.get_remote_commands()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#uartremote-for-arduino">UartRemote for Arduino</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#differences-compared-to-micropython-implementation">Differences compared to MicroPython implementation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#api">API</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arguments-struct">Arguments struct</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">Examples</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#struct-library">Struct library</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#status">Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#helper-methods">Helper Methods</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Uartremote.command"><code class="docutils literal notranslate"><span class="pre">Uartremote.command</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.encode"><code class="docutils literal notranslate"><span class="pre">UartRemote.encode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.decode"><code class="docutils literal notranslate"><span class="pre">UartRemote.decode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.read_all"><code class="docutils literal notranslate"><span class="pre">UartRemote.read_all()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#UartRemote.force_read"><code class="docutils literal notranslate"><span class="pre">UartRemote.force_read()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#remote-module-loading">Remote module loading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-remotely-load-a-module">How to remotely load a module?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#protocol">Protocol</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#packet-format">Packet format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#uartremote-for-arduino">UartRemote for Arduino</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#differences-compared-to-micropython-implementation">Differences compared to MicroPython implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api">API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arguments-struct">Arguments struct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#struct-library">Struct library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#status">Status</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index.html#mpy-robot-tools">MPY Robot Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#mpy-robot-tools">MPY Robot Tools</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../Hardware/index.html">Hardware documentation</a></li>
+<p class="caption" role="heading"><span class="caption-text">Hardware</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Hardware/index.html">LMS-ESP32</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Hardware/index.html#opemmv-uart-convertor-board">OpemMV Uart Convertor board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Hardware/index.html#distance-sensor-breakout-board">Distance Sensor Breakout board</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Hardware/index.html#lms-esp8266">LMS-ESP8266</a></li>
 </ul>
 
         </div>
@@ -90,7 +118,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Software documentation</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">SerialTalk</a></li>
       <li class="breadcrumb-item active">Welcome to UartRemote documentation!</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/Software/UartRemote/index.rst.txt" rel="nofollow"> View page source</a>

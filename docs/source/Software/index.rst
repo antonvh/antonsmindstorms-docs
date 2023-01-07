@@ -1,10 +1,5 @@
-Software documentation
-======================
-
-Hhere you will find documentation about the various software porjects created by Anton's Mindstorms:
-
 SerialTalk
-----------
+==========
 
 .. toctree::
    :maxdepth: 2
@@ -12,7 +7,7 @@ SerialTalk
    SerialTalk/serialtalk.rst
    
 UartRemote
-----------
+==========
 
 This is a library that now is incorporated in the SerialTalk library.
 
@@ -24,7 +19,7 @@ This is a library that now is incorporated in the SerialTalk library.
 
 
 MPY Robot Tools
----------------------------
+===============
 
 .. toctree::
    :maxdepth: 1
