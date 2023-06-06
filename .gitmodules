@@ -1,0 +1,3 @@
+[submodule "docs/source/Software/mpy-robot-tools"]
+	path = docs/source/Software/mpy-robot-tools
+	url = https://github.com/antonvh/mpy-robot-tools
