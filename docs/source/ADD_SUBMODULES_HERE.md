@@ -1,1 +1,0 @@
-Use `git submodule add <repository_url>`
