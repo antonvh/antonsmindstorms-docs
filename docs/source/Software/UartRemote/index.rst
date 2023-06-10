@@ -1,5 +1,6 @@
-Welcome to UartRemote documentation!
-=======================================
+#####################################
+UartRemote documentation
+#####################################
 
 
 This is a library for robust, near real-time communication between two UART devices. We developed it on python 3.9 with LEGO EV3, SPIKE Prime and other MicroPython (ESP/STM32) modules. The library is available on github: `UartRemote on GitHub <https://github.com/antonvh/UartRemote>`_.

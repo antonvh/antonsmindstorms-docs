@@ -1,4 +1,8 @@
-Welcome to the SerialTalk documentation!
+######################
+SerialTalk documentation
+######################
+
+Overview of SerialTalk
 =======================================
 
 

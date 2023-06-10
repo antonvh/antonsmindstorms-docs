@@ -6,7 +6,7 @@ Examples
 *********
 
 
-.. _examples_basic_uartremote
+.. _examples_basic_uartremote:
 
 Basic encoding
 

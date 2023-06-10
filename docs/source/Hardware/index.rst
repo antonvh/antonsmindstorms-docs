@@ -1,4 +1,8 @@
 
+###################
+Hardware description and pinout
+###################
+
 LMS-ESP32
 =========
 
@@ -6,7 +10,8 @@ LMS-ESP32
 
 .. toctree::
    :maxdepth: 1
-
+   :titlesonly:
+   
    LMS-ESP32/hardware.rst
    LMS-ESP32/pinout.rst
    LMS-ESP32/Assembling-the-esp32-board.rst

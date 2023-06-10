@@ -35,6 +35,9 @@ is used, the following packet will be transmitted over the line::
 
   b'<b'\x1c\x04test\x04repr([1, 2, 3, 4, 5],)>'
 
+Encoding options
+----------------
+
 Format Option 1: python struct.pack
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
