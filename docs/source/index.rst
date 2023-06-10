@@ -6,47 +6,54 @@ Welcome to Anton's Mindstorms documentation!
 Software libraries
 ==================
 
-Software is here :doc:`/Software/index`
+mpy_robot_tools
+---------------
 
+Mpy_robot_tools is the Swiss army knife for programming animated, interactive robots.
+It has an installer for LEGO SPIKE Prime and LEGO MINDSTORMS.
 
+The library works on esp32, SPIKE, and mindstorms EV3,  
+or any robot microcontroller that has micropython.
 
-Huskylens
----------
+:doc:`/Software/mpy_robot_tools`
 
--  HuskyLens() - `Connect to
-   Huskylens <https://github.com/antonvh/LEGO-HuskyLenslib>`__ over a
-   serial port and get Image AI data.
--  clamp_int(n) - returns an an int between -100 and 100, clamping
-   higher or lower numbers.
+SerialTalk
+__________
 
+Serial Remote Procedure call, that works over UART, sockets and BT RFComm. 
+In fact it works over any serial protocol. The protocol is the same as
+UartRemote, but it is generalized to work over more channels than just UART.
 
+:doc:`/Software/serialtalk`
 
-Remote UART library: uartremote.py
-----------------------------------
+UartRemote
+----------
 
-NOTE: This is temporary. In the future I hope to replace with
-`serialtalk <https://github.com/antonvh/SerialTalk>`__. It’s the same
-idea but it also works over bluetooth and websockets. This is a library
-for robust, near real-time communication between two UART devices. We
-developed it with LEGO EV3, SPIKE Prime and other MicroPython (ESP)
-modules. The library has the following properties: - It is fast enough
-to read sensor data at 30-50Hz. - It is fully symmetrical, so master and
-slave can have the same import. - It includes a RAW REPL mode to upload
-code to a slave module. This means you can develop code for both modules
-in one file. - It is implemented in MicroPython and Arduino/C code. With
-arduino code, much higher sensor reading speeds are possible, but
-flashing is a bit less user friendly. - The library has a command loop
-to wait and listen for calls. That loop is customizable and non-blocking
-so you can add your own code to it. - The C-struct-like encoding is
-included in the payload, so the other side always knows how to decode
-it.
+This is a library
+for robust, near real-time communication between two UART devices. 
+It has been superseded by serialtalk.
+We developed it with LEGO EV3, SPIKE Prime, and other MicroPython (ESP)
+modules. 
 
-Read more in the `README file of that
-library. <Submodules/UartRemote/README.md>`__
+:doc:`/Software/UartRemote/index`
 
+Hardware documentation
+======================
 
+Find all pinouts and board layouts for the expansion boards, like LMS-ESP32, from antonsmindstorms.com.
 
+:doc:`/Hardware/index`
 
+Firmware documentation
+======================
+
+For our ESP32 boards, we have compiled powerful firmware. 
+You can install the firmware via https://firmware.antonsmindstorms.com
+You have the choice of:
+
+- :doc:`a MicroPython firmware with ulab and LVGL </Firmware/Micropython/micropython>`
+
+- :doc:`an Arduino version that connects to Bluetooth gamepads. </Firmware/BluePad32/bluepad32>`
 
 Table of Contents
 =============================

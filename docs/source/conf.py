@@ -21,6 +21,7 @@ exclude_patterns = []
 # Import location for autodoc
 import os, sys
 sys.path.insert(0, os.path.abspath("Software/mpy-robot-tools"))
+sys.path.insert(0, os.path.abspath("Software/PyHuskyLens/Library"))
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

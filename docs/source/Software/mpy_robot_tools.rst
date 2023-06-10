@@ -181,7 +181,19 @@ mpy\_robot\_tools.servo module
    :undoc-members:
    :show-inheritance:
 
+mpy\_robot\_tools.pyhuskylens module
+------------------------------------
 
+
+-  HuskyLens() - Connect to
+   Huskylens over a
+   serial port and get Image AI data.
+
+
+.. automodule:: pyhuskylens
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 Stubs
 =====
