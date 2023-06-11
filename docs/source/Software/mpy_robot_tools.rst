@@ -5,44 +5,45 @@ mpy_robot_tools documentation
 Installation
 ============
 
+SPIKE Prime / Mindstorms Robot Inventor Installation
+----------------------------------------------------
+
 1. Copy the code from the `install
    script <https://github.com/antonvh/mpy-robot-tools/blob/master/Installer/install_mpy_robot_tools.py>`__ (`click the Copy raw
    contents
    button <https://github.blog/changelog/2021-09-20-quickly-copy-the-contents-of-a-file-to-the-clipboard/>`__)
-   to an empty python project in the LEGO MINDSTORMS or LEGO SPIKE
+   to an empty Python project in the LEGO MINDSTORMS or LEGO SPIKE
    program.
-2. Then run it once, it will take additional time to transfer to the Hub
+2. Then run it once. It will take additional time to transfer to the Hub
    please use patience.
 3. Start using the modules.
+
+EV3 Installation
+----------------
+
+Create a new VS Code EV3 project with the MINDSTORMS extension. Then git clone this repository
+in the new project directory.
 
 FAQ
 ----
 
-... The Spike/Mindstorm app asks for a firmware update, after installing
-   , and you
-   accept you will need to re-install. You can just disconnect and ignore
-   the update the Hub will be in a “big square” for waiting for update just
-   long press the center button and power cycle the hub to reconect to the
-   lego app, it won’t ask a second time to update in the instance.
+... The Spike/Mindstorm app asks for a firmware update after installing
+   The LEGO software has a bug with a memory leak. The drive becomes filled up,
+   and you lose disk space. To fix it, connect your hub via USB and go here:
+   https://dfu.pybricks.com/fix-update/
 
-Uninstall
----------
+... How do I uninstall? Should I uninstall?
+   There is no reason to uninstall the libraries. Unless you call them, they do
+   nothing. If you need disk space, you can delete the files with a file
+   manager like Thonny or factory reset the hub through the LEGO software.
 
-To uninstall remove the directory out of the /projects folder using a
-script, or something like ThonnyIDE File manager.
-
-To factory reset your hub to factory settings, using LEGO app, press the
-Hub Connection Icon on the Programming Canvas, press the More Button
-(···) in the Dashboard tab and select Reset Settings. Press OK to
-confirm the reset, or Cancel to keep the current settings. Be careful -
-resetting your Hub will delete all of your programs, and they can’t be
-recovered
 
 Contributing
 ============
 
 Please fork and help out this project by adding documentation. Could 
-be docstrings, README or tutorials.
+be docstrings, README, or tutorials.
+
 
 Overview of the mpy_robot_tools modules
 =======================================

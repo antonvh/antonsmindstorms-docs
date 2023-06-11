@@ -20,9 +20,10 @@ or any robot microcontroller that has micropython.
 SerialTalk
 __________
 
-Serial Remote Procedure call, that works over UART, sockets and BT RFComm. 
-In fact it works over any serial protocol. The protocol is the same as
+Serial Remote Procedure call works over UART, sockets, and BT RFComm. 
+In fact, it works over any serial protocol. The protocol is the same as
 UartRemote, but it is generalized to work over more channels than just UART.
+The protocol is compatible.
 
 :doc:`/Software/serialtalk`
 

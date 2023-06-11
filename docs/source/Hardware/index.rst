@@ -5,6 +5,10 @@ Hardware description and pinout
 
 LMS-ESP32
 =========
+The versatile ESP32 board with LEGO Technic dimensions to connect
+Arduino, i2c, i2s, spi, and other hardware to your LEGO.
+Get one here:
+https://www.antonsmindstorms.com/product/wifi-python-esp32-board-for-mindstorms/
 
 |Esp32 wifi board|
 
@@ -20,6 +24,12 @@ LMS-ESP32
 
 OpemMV Uart Convertor board
 ===========================
+
+The OpemMV Uart Converter board is a LEGO MINDSTORMS breakout board to the size of an OpenMV Camera.
+You can use it without a camera as a regular breakout board too. Just
+don't solder 8-pin headers on the sides.
+Get one here:
+https://www.antonsmindstorms.com/product/uart-breakout-board-for-spike-and-ev3-openmv-compatible/
 
 |OpenMV breakout|
 
