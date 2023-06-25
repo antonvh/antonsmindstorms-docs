@@ -19,13 +19,12 @@ Usage: you can use all of parts of this library for your own projects. Please gi
 
 
 .. include:: uartremote.rst
-.. include:: installation.rst
 .. include:: examples.rst
 .. include:: protocol.rst
 .. include:: arduinouartremote.rst
 
 Status
-------
+======
 
 .. image:: https://readthedocs.org/projects/uartremote/badge/?version=latest
   :target: https://uartremote.readthedocs.io/en/latest/?badge=latest

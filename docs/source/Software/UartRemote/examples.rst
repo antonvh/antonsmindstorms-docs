@@ -1,9 +1,9 @@
 .. currentmodule:: examples
 .. _examples:
 
-*********
+
 Examples
-*********
+========
 
 
 .. _examples_basic_uartremote:
