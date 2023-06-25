@@ -2,8 +2,8 @@
 .. _examples:
 
 
-Examples
-========
+Micropython Examples
+====================
 
 
 .. _examples_basic_uartremote:

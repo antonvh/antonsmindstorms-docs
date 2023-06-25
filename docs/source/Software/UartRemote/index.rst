@@ -18,10 +18,14 @@ The library has the following properties:
 Usage: you can use all of parts of this library for your own projects. Please give us credits at least. We put a lot spare time in this. You are also welcome to contribute. Please fork and PR.
 
 
-.. include:: uartremote.rst
-.. include:: examples.rst
-.. include:: protocol.rst
-.. include:: arduinouartremote.rst
+.. toctree::
+  :titlesonly:
+
+  uartremote.rst
+  examples.rst
+  protocol.rst
+  arduinouartremote.rst
+
 
 Status
 ======

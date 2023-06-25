@@ -1,6 +1,6 @@
 
-UartRemote Library
-==================
+UartRemote Micropython API
+==========================
 
 This library implements a class with methods that help to set up robust communication between instances running MicroPython which are connected over a UART interface.
 

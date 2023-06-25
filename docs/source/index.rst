@@ -60,7 +60,6 @@ You have the choice of:
 .. toctree::
    :hidden:
    :maxdepth: 2
-   :titlesonly:
    
    Software/index
    Hardware/index

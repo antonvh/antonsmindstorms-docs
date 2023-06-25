@@ -1,7 +1,7 @@
 
 
-Protocol
-========
+Uartremote & Serialtalk Communication Protocol
+==============================================
 
 The communication between different UartRemote instances uses a self-described packet format. This section describes the packet format in detail.
 
