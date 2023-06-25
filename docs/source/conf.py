@@ -13,7 +13,7 @@ author = "Anton, Ste7an"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["sphinx.ext.autodoc"]
+extensions = ["sphinx.ext.autodoc", 'sphinx_sitemap']
 
 templates_path = ["_templates"]
 exclude_patterns = []
@@ -22,6 +22,10 @@ exclude_patterns = []
 import os, sys
 sys.path.insert(0, os.path.abspath("Software/mpy-robot-tools"))
 sys.path.insert(0, os.path.abspath("Software/PyHuskyLens/Library"))
+
+# Options for sitemap
+html_baseurl = 'https://docs.antonsmindstorms.com/'
+html_extra_path = ['robots.txt']
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

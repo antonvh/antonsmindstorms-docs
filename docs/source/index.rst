@@ -56,19 +56,19 @@ You have the choice of:
 
 - :doc:`an Arduino version that connects to Bluetooth gamepads. </Firmware/BluePad32/bluepad32>`
 
-Table of Contents
-=============================
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
-
+   :titlesonly:
+   
    Software/index
    Hardware/index
    Firmware/index
 
    
 Indices and tables
-------------------
+==================
 
 * :ref:`genindex`
 * :ref:`modindex`
