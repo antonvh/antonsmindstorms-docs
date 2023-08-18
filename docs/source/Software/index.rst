@@ -8,6 +8,7 @@ Software libraries
    serialtalk
    mpy_robot_tools
    UartRemote/index
+   PUPRemote/docs/index
    
    
 
