@@ -4,3 +4,6 @@
 [submodule "docs/source/Software/PyHuskyLens"]
 	path = docs/source/Software/PyHuskyLens
 	url = https://github.com/antonvh/PyHuskyLens
+[submodule "docs/source/Software/PUPRemote"]
+	path = docs/source/Software/PUPRemote
+	url = https://github.com/antonvh/PUPRemote
