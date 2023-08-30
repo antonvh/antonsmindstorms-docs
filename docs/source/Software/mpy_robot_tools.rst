@@ -135,6 +135,14 @@ Serialtalk and a plain UART, you need to pass a single BLEHandler to all of them
    :show-inheritance:
 
 
+mpy\_robot\_tools.sen0539 module
+--------------------------------
+
+.. automodule:: mpy_robot_tools.sen0539
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 mpy\_robot\_tools.ctrl\_plus module
 -----------------------------------
 
