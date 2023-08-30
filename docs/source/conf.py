@@ -14,7 +14,8 @@ author = "Anton, Ste7an"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 #extensions = ["sphinx.ext.autodoc", 'sphinx_sitemap', 'sphinx.ext.napoleon']
-extensions = ["sphinx.ext.autodoc", 'sphinx.ext.napoleon']
+extensions = ["sphinx.ext.autodoc", 'sphinx.ext.napoleon', 'sphinx.ext.autosummary']
+autodoc_mock_imports = ["utime","uos","micropython","machine","busio","board","pybricks"]
 
 templates_path = ["_templates"]
 exclude_patterns = []
@@ -24,6 +25,7 @@ import os, sys
 sys.path.insert(0, os.path.abspath("Software/mpy-robot-tools"))
 sys.path.insert(0, os.path.abspath("Software/PyHuskyLens/Library"))
 sys.path.insert(0, os.path.abspath("Software/PUPRemote/src"))
+sys.path.insert(0, os.path.abspath("Software/SerialTalk/"))
 
 # Options for sitemap
 html_baseurl = 'https://docs.antonsmindstorms.com/'

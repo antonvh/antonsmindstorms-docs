@@ -7,3 +7,6 @@
 [submodule "docs/source/Software/PUPRemote"]
 	path = docs/source/Software/PUPRemote
 	url = https://github.com/antonvh/PUPRemote
+[submodule "docs/source/Software/SerialTalk"]
+	path = docs/source/Software/SerialTalk
+	url = https://github.com/antonvh/SerialTalk

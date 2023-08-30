@@ -25,7 +25,7 @@ In fact, it works over any serial protocol. The protocol is the same as
 UartRemote, but it is generalized to work over more channels than just UART.
 The protocol is compatible.
 
-:doc:`/Software/serialtalk`
+:doc:`/Software/SerialTalk/docs/index`
 
 UartRemote
 ----------
