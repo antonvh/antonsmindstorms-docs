@@ -7,7 +7,7 @@ Hardware Discription
 Overview
 --------
 
-In the picture below an overviwe of the hardware components of the LMS-ESP32 board is given.
+In the picture below an overview of the hardware components of the LMS-ESP32 board is given.
 
 .. image:: ./images/lmsesp32_hardware_overview.jpg
   :width: 1000
