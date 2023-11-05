@@ -2,15 +2,25 @@
 mpy_robot_tools documentation
 #############################
 
-About mpy_robot_tools: a set MicroPython robotics libraries
-===========================================================
+About mpy_robot_tools
+=====================
+
+MicroPython robotics libraries
+------------------------------
 
 When programming robots with sensors, you want to focus on the behaviors, not the interfaces.
 This set of libraries contains abstractions for interfaces like Bluetooth Low Energy (BLE), Huskylens, UART communication, synchronized motor arrays, and LED lights.
 
-With this set, you can easily create a Bluetooth-controlled robot with multiple robotic hubs, communicating and synchronizing their motors. They can run lights, read camera data, and read Arduino sensors.
+With this set, you can easily create a Bluetooth-controlled robot with multiple robotic hubs, communicating and synchronizing their motors. They can run lights, read camera data, and read Arduino sensors. 
 
-Libraries will work MicroPython devices like OpenMV, ESP32, LEGO Robot Inventor, and LEGO SPIKE Prime. 
+The BLE library from bt.py supports UART, MIDI instruments, LEGO BLE protocol, and a simple remote control protocol.
+
+mpy_robot_tools works on these MicroPython devices:
+- OpenMV
+- ESP32
+- LEGO Robot Inventor hub
+- LEGO SPIKE Prime hub
+
 
 Installation
 ============
@@ -37,7 +47,9 @@ in the new project directory.
 OpenMV / ESP32 Installation
 ---------------------------
 
-Copy the files to your device using Thonny or the USB drive feature. Then import them like any other Python file.
+Copy the files to your device using Thonny or the USB drive feature. Then import them like any other Python file. 
+
+Alternatively you can run Pymakr in VS Code and start one of the LMS-ESP32 example projects.
 
 FAQ
 ----
@@ -65,16 +77,15 @@ Please fork and help out this project by adding documentation. Could
 be docstrings, README, or tutorials.
 
 
-Overview of the mpy_robot_tools modules
-=======================================
-
+Documentation of the mpy_robot_tools modules
+============================================
 
 mpy_robot_tools.bt module
----------------------------
+-------------------------
 
 The bt.py module abstracts low-level BLE characteristics and services. The way BLE works is well documented at https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt. You can start communication with a UARTCentral on one side and a UART Peripheral on the other. The UARTCentral initiates the communication, and the peripheral waits for a connection, like a server. 
 
-The nRF connect smartphone app is convenient to test and debug Bluetooth.
+The *nRF connect* smartphone app is convenient to test and debug Bluetooth.
 
 Remote control
 ^^^^^^^^^^^^^^
@@ -91,7 +102,8 @@ RCReceiver and RCTransmitter are subclasses of the UARTPeripheral and UARTCentra
 
 .. code:: python
 
-   # RCTransmitter() - Connects to an RCReceiver and transmits the state of 9 gamepad-like controls.
+   # RCTransmitter() - Connects to an RCReceiver and 
+   # transmits the state of 9 gamepad-like controls.
    remote_control = RCTransmitter()
    remote_control.connect(name="snake")
    remote_control.set_stick(L_STICK_HOR, steer_angle )
@@ -104,6 +116,7 @@ Buffering
 By default, the UART objects are buffered. They will remember everything written to them, and you should flush their buffer with ``_ = read()`` to start clean. For remote control and state communication, the buffer gets in the way. You want to read the most recent state when it arrives. In that case initialize with ``additive_buffer=False`` 
 
 Example:
+
 .. code-block:: python
 
    # Code for a snake tail segment, waiting for connections from the head.
@@ -138,25 +151,29 @@ Serialtalk and a plain UART, you need to pass a single BLEHandler to all of them
 mpy\_robot\_tools.sen0539 module
 --------------------------------
 
+This contains a python API to interface with the DFRobot Sen0539 Voice Recognition sensor. This module supports I2C only, so it won't run on an Inventor hub. Use LMS-ESP32 or OpenMV. The sensor is capable of UART, so theoretically this module could be expanded with UART support.
+
 .. automodule:: mpy_robot_tools.sen0539
    :members:
    :undoc-members:
    :show-inheritance:
 
+
 mpy\_robot\_tools.ctrl\_plus module
 -----------------------------------
 
--  SmartHub() - Connects to a Technic smart hub and is able to control
-   connected devices and read the states of the IMU and connected
-   motors.
+This module connects to a Technic smart hhub and is able to control connected devices, read the states of the IMU, and control connected motors.
 
 .. automodule:: mpy_robot_tools.ctrl_plus
    :members:
    :undoc-members:
    :show-inheritance:
 
+
 mpy\_robot\_tools.helpers module
 --------------------------------
+
+Helper modules for frequently used functions. Most of the helpers have moved to the Pybricks module.
 
 .. automodule:: mpy_robot_tools.helpers
    :members:
@@ -167,13 +184,18 @@ mpy\_robot\_tools.helpers module
 mpy\_robot\_tools.light module
 ------------------------------
 
+Helper functions to control and animate LEDs on the 5x5 light matrix of the SPIKE Prime and Inventor hubs.
+
 .. automodule:: mpy_robot_tools.light
    :members:
    :undoc-members:
    :show-inheritance:
 
+
 mpy\_robot\_tools.motor\_sync module
 ------------------------------------
+
+Synchronize motor movements with keyframed animations. Great for animating walker legs in spiders, at-at, tars, gelo etc...
 
 .. automodule:: mpy_robot_tools.motor_sync
    :members:
@@ -183,6 +205,8 @@ mpy\_robot\_tools.motor\_sync module
 mpy\_robot\_tools.np\_animation module
 --------------------------------------
 
+Animate Neopixels (ws2812) RGB leds with this module. Great for police lights, inidicator lights, knight-rider animation and more.
+
 .. automodule:: mpy_robot_tools.np_animation
    :members:
    :undoc-members:
@@ -190,6 +214,8 @@ mpy\_robot\_tools.np\_animation module
 
 mpy\_robot\_tools.pybricks module
 ---------------------------------
+
+The Robot Inventor Python api for motors and sensors is not very comfortable. This Pybricks module allows you to use most of the Pybricks API as documented on https://docs.pybricks.com.
 
 .. automodule:: mpy_robot_tools.pybricks
    :members:
@@ -204,6 +230,8 @@ Legacy module for compatibility reasons. Don't use.
 mpy\_robot\_tools.servo module
 ------------------------------
 
+Simple module to control hobby servos on LMS-ESP32. Converts angles to 2000us PWM signals.
+
 .. automodule:: mpy_robot_tools.servo
    :members:
    :undoc-members:
@@ -212,11 +240,7 @@ mpy\_robot\_tools.servo module
 mpy\_robot\_tools.pyhuskylens module
 ------------------------------------
 
-
--  HuskyLens() - Connect to
-   Huskylens over a
-   serial port and get Image AI data.
-
+Module with Python API for a Huskylens. This uses the Huskylens serial protocol and get Image AI data.
 
 .. automodule:: pyhuskylens
    :members:
