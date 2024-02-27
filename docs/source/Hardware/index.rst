@@ -22,8 +22,32 @@ https://www.antonsmindstorms.com/product/wifi-python-esp32-board-for-mindstorms/
    LMS-ESP32/Troubeshooting-your-LMS-ESP32-board.rst
    
 
-OpemMV Uart Convertor board
-===========================
+spike-openmv smart camera board with 5V power supply - pinout
+=============================================================
+This board is built for SPIKE Prime and Robot Inventor hubs. 
+It follows the pinout of an OpenMV camera, but it can be used with a Huskylens too.
+To get 5V you need to force the LEGO hub to supply 8V on the M+ lead (100% motor power).
+Use it with :doc:`PUPRemote <../Software/PUPRemote/docs/index>` on SPIKE3 and Pybricks.
+Use it with :doc:`SerialTalk </Software/SerialTalk/docs/index>` on SPIKE2 and Robot Inventor. 
+Here's the pinout of the spike-openmv board.
+
+|spike-openmv pinout|
+
+
+ev3-openmv smart camera board - pinout
+=============================================================
+This board is a breakout board for EV3 Intelligent Bricks.  
+It follows the pinout of an OpenMV camera, but it can be used with a Huskylens too.
+Use it with :doc:`SerialTalk </Software/SerialTalk/docs/index>` for general serial applications.
+You can also use it with `PyHuskyLens <https://github.com/antonvh/PyHuskyLens>`_ on that hardware.
+Here's the pinout of the ev3-openmv board.
+
+|ev3-openmv pinout|
+
+Deprecated: OpemMV Uart Convertor board
+=======================================
+This board is not for sale anymore. It is superseded by the LMS-ESP32, spike-openmv,
+and ev3-openmv boards.
 
 The OpemMV Uart Converter board is a LEGO MINDSTORMS breakout board to the size of an OpenMV Camera.
 You can use it without a camera as a regular breakout board too. Just
@@ -38,8 +62,10 @@ https://www.antonsmindstorms.com/product/uart-breakout-board-for-spike-and-ev3-o
 
    OpenMV convertor board/Assembling-the-converter-board.rst
 
-Distance Sensor Breakout board
-==============================
+Deprecated: Distance Sensor Breakout board
+==========================================
+This board is not for sale anymore. It is superseded by the LMS-ESP32, spike-openmv,
+and ev3-openmv boards.
 
 |distance sensor breakout|
 
@@ -48,8 +74,9 @@ Distance Sensor Breakout board
 
    Distance Sensor Breakout Board/Assembling-the-distance-sensor-breakout.rst
 
-LMS-ESP8266
-===========
+Deprecated: LMS-ESP8266
+=======================
+This board is not for sale anymore. It is superseded by the LMS-ESP32 board.
 
 |Esp8266 wifi board|
 
@@ -70,4 +97,8 @@ LMS-ESP8266
 .. |distance sensor breakout| image:: Distance\ Sensor\ Breakout\ Board/images/Distance-breakout.jpg
    :width: 400
 .. |Esp8266 wifi board| image:: LMS-ESP8266/images/Breakout-BUNDLE.jpg
+   :width: 400
+.. |spike-openmv pinout| image:: images/spike-openmv.svg
+   :width: 800
+.. |ev3-openmv pinout| image:: images/ev3-openmv.svg
    :width: 400

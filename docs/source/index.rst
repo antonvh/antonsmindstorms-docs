@@ -6,6 +6,15 @@ Welcome to Anton's Mindstorms documentation!
 Software libraries
 ==================
 
+PUPRemote
+---------
+
+PUPRemote emulates the LEGO sensor protocol. You can define custom sensors in Pybricks, SPIKE2,
+and Robot Inventor. In SPIKE3 you need to exactly emulate existing LEGO sensors. This is
+also possible with PUPRemote.
+
+:doc:`/Software/PUPRemote/docs/index`
+
 mpy_robot_tools
 ---------------
 
