@@ -6,6 +6,20 @@ Hardware documentation
 Here's an overview of the documentation of all PCB's (Printed Circuit Boards) 
 we produced on https://antonsmindstorms.com. 
 
+LMS-ESP32-v2
+============
+The improved version of the `WiFi Python LMS-ESP32v2 board for MINDSTORMS and SPIKE <https://www.antonsmindstorms.com/product/wifi-python-esp32-board-for-mindstorms/>`__ 
+connects servos, arduino, i2c, i2s, spi, grpahics display, and other hardware to your LEGO. 
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :titlesonly:
+   
+   LMS-ESP32v2/*
+   
+
+|lms-esp32v2|
 
 LMS-ESP32-v1.0
 ==============
