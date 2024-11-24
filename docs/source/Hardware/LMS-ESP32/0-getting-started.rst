@@ -6,8 +6,8 @@ Getting started with your new LMS-ESP32 board
   :width: 400
 
 
-Firmare for the LMS-ESP32
--------------------------
+Firmware for the LMS-ESP32
+--------------------------
 
 Your board comes flashed with the last Micropython 1.19. 
 With our online firmware flasher on https://firmware.antonsmindstorms.com,
