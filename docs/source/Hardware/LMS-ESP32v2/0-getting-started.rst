@@ -1,7 +1,8 @@
 Getting started with your new LMS-ESP32v2 board
 ===============================================
 
-.. image:: ../images/LMS-ESP32v2_with_cable.jpg
+
+.. image:: ./images/LMS-ESP32v2_with_cable.jpg
   :alt: LMS_esp32v2 Photo
   :width: 400
 
