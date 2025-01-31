@@ -1,13 +1,46 @@
 MicroPython firmware for LMS-ESP32
 ##################################
 
+
 We have pre-compiled two MicroPython firmwares for LMS-ESP32:
 - MicroPython v1.24.1 uartremote+pupremote
 - MicroPython v1.19.1 with lvgl+ulab+uartremote+pupremote
 
-You can install them via `our firmware installer <MicroPython v1.19.1 with lvgl+ulab+uartremote+pupremote>`
+You can install them via `our firmware installer <https://firmware.antonsmindstorms.com/>`__.
 
-Our pre-compiled firmware include these libraries:
+Our pre-compiled firmware include these libraries for your `import` convenience.
+
+tester libraries
+================
+
+See their internals here: TODO Add link!
+
+- lms_esp32.py
+- test_dut.py
+- tester.py
+- chipinfo. get_chip_info() # returns the type of ESP32 chip so that we can distinguish between LMS_ESP32v1 and LMS_ESP32v2
+
+
+mpy_robot_tools
+===============
+On lms-esp32 you can import any of mpy-robot-tools libraries without adding `mpy_robot_tools`. So for `servo` just do `import servo`.
+
+- servo control: `servo <../Software/mpy_robot_tools.html#mpy_robot_tools-servo-module>`__
+- neopixel animation: `np_animation <../Software/mpy_robot_tools.html#mpy-robot-tools-np-animation-module>`__
+- bluetooth: `bt <../Software/mpy_robot_tools.html#mpy-robot-tools-bt-module>`__
+- bluetooth `remote control other lego hubs: ctrl_plus <../Software/mpy_robot_tools.html#mpy-robot-tools-ctrl-plus-module>`__
+- HuskyLens i2c and UART: `pyhuskylens <../Software/mpy_robot_tools.html#mpy-robot-tools-pyhuskylens-module>`__
+
+SerialTalk and uartremote
+=========================
+
+- uartremote.py
+- serialtalk/usockets.py
+- serialtalk/esp32.py
+- serialtalk/serialtalk.py
+- serialtalk/__init__.py
+- serialtalk/auto.py
+
 
 
 LVGL library
@@ -20,7 +53,7 @@ ulab-library
 ============
 
 `ulab` is a numpy-like array manipulation library for MicroPython and CircuitPython. The module is written in native C, 
-defines compact containers (ndarrays) for numerical data of one to four dimensions, and is fast. `ulab`` uses the extra 4MByte pf PSRAM of the ESP32-wrover very effienctly and can thus
+defines compact containers (ndarrays) for numerical data of one to four dimensions, and is fast. `ulab` uses the extra 4MByte pf PSRAM of the ESP32-wrover very effienctly and can thus
 be used for handling larger arrays. 8-, and 16-bit signed and unsigned integer dtypes, as well as float, and, optionally,  
 complex are supported. The float implementation of micropython (32-bit float, or 64-bit double) is automatically detected and handled.
 Furthermore, some `scipy` library functions are also incorportaed in the `ulab` library.

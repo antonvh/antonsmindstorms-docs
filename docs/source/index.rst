@@ -62,9 +62,9 @@ You can install the firmware via https://firmware.antonsmindstorms.com
 
 You have the choice of:
 
-- :doc:`a MicroPython firmware with ulab and LVGL </Firmware/Micropython/micropython>`
+- :doc:`a MicroPython firmware with ulab and LVGL </Firmware/micropython>`
 
-- :doc:`an Arduino version that connects to Bluetooth gamepads. </Firmware/BluePad32/bluepad32>`
+- :doc:`an Arduino version that connects to Bluetooth gamepads. </Firmware/bluepad32>`
 
 
 .. toctree::
@@ -74,6 +74,7 @@ You have the choice of:
    Software/index
    Hardware/index
    Firmware/index
+
 
    
 Indices and tables

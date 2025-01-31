@@ -1,4 +1,8 @@
-`<https://circuitpython.org/>`is a MicroPython spin-off maintained by AdaFruit. It has a vast 
+CircuitPython firmware
+######################
+
+
+`<https://circuitpython.org/>`__ is a MicroPython spin-off maintained by AdaFruit. It has a vast 
 library for all different kinds of sensors and actuators. Originally, CircuitPython only ran on boards using a native USB port. 
 These devices monifests themselves as a mass storgae device on which python programs can be dropped. 
 Lately, CircuitPython brings the so-called 

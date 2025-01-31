@@ -1,3 +1,7 @@
+BluePad32 Arduino firmware
+#########################
+
+
 Precompiled binary
 ==================
 
