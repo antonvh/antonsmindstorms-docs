@@ -54,11 +54,12 @@ Find all pinouts and board layouts for the expansion boards, like LMS-ESP32, fro
 
 :doc:`/Hardware/index`
 
-Firmware documentation
-======================
+LMS-ESP32 Firmware documentation
+================================
 
 For our ESP32 boards, we have compiled powerful firmware. 
 You can install the firmware via https://firmware.antonsmindstorms.com
+
 You have the choice of:
 
 - :doc:`a MicroPython firmware with ulab and LVGL </Firmware/Micropython/micropython>`

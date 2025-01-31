@@ -1,5 +1,23 @@
-`ulab`-library
-===============
+MicroPython firmware for LMS-ESP32
+##################################
+
+We have pre-compiled two MicroPython firmwares for LMS-ESP32:
+- MicroPython v1.24.1 uartremote+pupremote
+- MicroPython v1.19.1 with lvgl+ulab+uartremote+pupremote
+
+You can install them via `our firmware installer <MicroPython v1.19.1 with lvgl+ulab+uartremote+pupremote>`
+
+Our pre-compiled firmware include these libraries:
+
+
+LVGL library
+============
+
+A micrpython port of the LVGL library is incorporated in the firmware. This allows to program GUI's on TFT screens very easily from within the MicroPython environment.
+
+
+ulab-library
+============
 
 `ulab` is a numpy-like array manipulation library for MicroPython and CircuitPython. The module is written in native C, 
 defines compact containers (ndarrays) for numerical data of one to four dimensions, and is fast. `ulab`` uses the extra 4MByte pf PSRAM of the ESP32-wrover very effienctly and can thus
@@ -111,7 +129,3 @@ In the code snippets below, the signal of an I2S microphone is read in an array.
     u.loop()
 
 
-LVGL library
-============
-
-A micrpython port of the LVGL library is incorporated in the firmware. This allows to program GUI's on TFT screens very easily from within the MicroPython environment.
