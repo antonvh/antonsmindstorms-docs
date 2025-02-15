@@ -133,3 +133,6 @@ This board is not for sale anymore. It is superseded by the LMS-ESP32 board.
 .. |lms-ev3-openmv| image:: images/lms-ev3-openmv.jpg
    :target: lms-ev3-openmv.html
    :width: 400
+.. |lms-esp32v2| image:: LMS-ESP32v2/images/LMS-ESP32v2_with_cable.jpg
+   :target: LMS-ESP32v2/0-getting-started.html
+   :width: 400
