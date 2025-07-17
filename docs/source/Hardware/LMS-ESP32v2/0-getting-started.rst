@@ -14,8 +14,12 @@ Your board comes flashed with the last Micropython 1.24.
 With our online firmware flasher on https://firmware.antonsmindstorms.com,
 you can flash it with other firmware, for instance, if you want to connect gamepads. Only works in Google Chrome or MS Edge.
 
+Connecting hardware, sensors and servos to the board
+-----------------------
 
-Connecting to the board
+See :doc:`Pinout <1-pinout>` for all ports and pin functions.
+
+Connecting your tablet or laptop to the board
 -----------------------
 
 The easiest way to edit files on the board is a program called `Thonny <https://thonny.org/>`__. 
