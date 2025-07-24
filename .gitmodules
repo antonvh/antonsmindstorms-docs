@@ -10,3 +10,6 @@
 [submodule "docs/source/Software/SerialTalk"]
 	path = docs/source/Software/SerialTalk
 	url = https://github.com/antonvh/SerialTalk
+[submodule "docs/source/Software/micropup"]
+	path = docs/source/Software/micropup
+	url = https://github.com/ste7anste7an/micropup
