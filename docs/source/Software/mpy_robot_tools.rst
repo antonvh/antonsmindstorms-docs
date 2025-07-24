@@ -5,6 +5,12 @@ mpy_robot_tools documentation
 About mpy_robot_tools
 =====================
 
+Mpy_robot_tools is the Swiss army knife for programming animated, interactive robots.
+It has an installer for LEGO SPIKE Prime and LEGO MINDSTORMS.
+
+The library works on esp32, SPIKE, and mindstorms EV3,  
+or any robot microcontroller that has micropython.
+
 MicroPython robotics libraries
 ------------------------------
 

@@ -81,6 +81,7 @@ You can use it without a camera as a regular breakout board too.
 
 |OpenMV breakout|
 
+
 Deprecated: Distance Sensor Breakout board
 ==========================================
 This board is not for sale anymore. It is superseded by the LMS-ESP32, spike-openmv,
@@ -109,7 +110,6 @@ This board is not for sale anymore. It is superseded by the LMS-ESP32 board.
    LMS-ESP8266/Configure-webrepl.rst
    LMS-ESP8266/Connecting-via-webrepl.rst
    LMS-ESP8266/Flashing-the-ESP-boards.rst 
-
 
 |Esp8266 wifi board|
 
