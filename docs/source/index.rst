@@ -1,55 +1,21 @@
-############################################
-Welcome to Anton's Mindstorms documentation!
-############################################
+#############################################################
+Anton's Mindstorms Coding libraries & tools API Documentation
+#############################################################
 
+This site contains the automatic documentation from docstrings in our coding software libraries.
+For general documentation about electronics, expansion boards for hubs, and firmware for these boards, 
+go to https://antonsmindstorms.com/docs.
 
-Software libraries
-==================
+Coding libraries & tools API Documentation
+==========================================
 
 Our libraries for easy communication between boards and tools for controlling LEGO Robots.
 
 .. toctree::
    :maxdepth: 2
 
-   Software/index
-
-Hardware documentation
-======================
-
-Find all pinouts and board layouts for the expansion boards, like LMS-ESP32, from antonsmindstorms.com.
-
-.. toctree::
-   :maxdepth: 2
-
-   Hardware/index
-
-
-LMS-ESP32 Firmware documentation
-================================
-
-For our ESP32 boards, we have compiled powerful firmware. 
-You can install the firmware via https://firmware.antonsmindstorms.com
-
-.. toctree::
-   :maxdepth: 2
-
-   Firmware/index
-
-
-
-.. .. toctree::
-..    :hidden:
-..    :maxdepth: 2
-   
-..    Software/index
-..    Hardware/index
-..    Firmware/index
-
-
-   
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   Software/micropup/docs/index
+   Software/mpy-robot-tools/Docs/index
+   Software/UartRemote/index
+   Software/PUPRemote/docs/index
+   Software/SerialTalk/docs/index

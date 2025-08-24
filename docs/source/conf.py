@@ -18,7 +18,7 @@ extensions = ["sphinx.ext.autodoc", 'sphinx.ext.napoleon', 'sphinx.ext.autosumma
 autodoc_mock_imports = ["utime","uos","machine","busio","board","pybricks"]
 highlight_language = 'python3'
 
-templates_path = ["_templates"]
+# templates_path = ["_templates"]
 exclude_patterns = []
 
 # Import location for autodoc
@@ -38,7 +38,7 @@ html_extra_path = ['robots.txt']
 
 # html_theme = 'alabaster'
 html_theme = "sphinx_rtd_theme"
-html_static_path = ["_static"]
+# html_static_path = ["static"]
 html_logo = "images/logo_small.png"
 html_favicon = "images/favicon.ico"
 html_theme_options = {
