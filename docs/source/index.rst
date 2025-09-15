@@ -16,6 +16,8 @@ Our libraries for easy communication between boards and tools for controlling LE
 
    Software/micropup/docs/index
    Software/mpy-robot-tools/Docs/index
-   Software/UartRemote/index
+   Software/PyHuskyLens/index
    Software/PUPRemote/docs/index
    Software/SerialTalk/docs/index
+   Software/UartRemote/index
+   
