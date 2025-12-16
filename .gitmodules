@@ -13,3 +13,6 @@
 [submodule "docs/source/Software/micropup"]
 	path = docs/source/Software/micropup
 	url = https://github.com/ste7anste7an/micropup
+[submodule "docs/source/Software/btbricks"]
+	path = docs/source/Software/btbricks
+	url = https://github.com/antonvh/btbricks
