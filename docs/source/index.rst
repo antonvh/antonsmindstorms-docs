@@ -15,9 +15,10 @@ Our libraries for easy communication between boards and tools for controlling LE
    :maxdepth: 2
 
    Software/micropup/docs/index
-   Software/mpy-robot-tools/Docs/index
+   Software/btbricks/docs/index
    Software/PyHuskyLens/index
    Software/PUPRemote/docs/index
    Software/SerialTalk/docs/index
    Software/UartRemote/index
+   Software/mpy-robot-tools/Docs/index
    
