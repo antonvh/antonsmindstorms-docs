@@ -16,6 +16,7 @@ Our libraries for easy communication between boards and tools for controlling LE
 
    Software/micropup/docs/index
    Software/btbricks/docs/index
+   Software/rcservo/docs/index
    Software/PyHuskyLens/index
    Software/PUPRemote/docs/index
    Software/SerialTalk/docs/index

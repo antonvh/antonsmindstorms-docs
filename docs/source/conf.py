@@ -29,6 +29,7 @@ sys.path.insert(0, os.path.abspath("Software/PUPRemote/src"))
 sys.path.insert(0, os.path.abspath("Software/SerialTalk/"))
 sys.path.insert(0, os.path.abspath("Software/micropup/library/"))
 sys.path.insert(0, os.path.abspath("Software/btbricks/"))
+sys.path.insert(0, os.path.abspath("Software/rcservo/"))
 
 # Options for sitemap
 html_baseurl = 'https://docs.antonsmindstorms.com/'

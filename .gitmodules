@@ -16,3 +16,6 @@
 [submodule "docs/source/Software/btbricks"]
 	path = docs/source/Software/btbricks
 	url = https://github.com/antonvh/btbricks
+[submodule "docs/source/Software/rcservo"]
+	path = docs/source/Software/rcservo
+	url = https://github.com/antonvh/rcservo
