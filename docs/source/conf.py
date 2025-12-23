@@ -15,7 +15,7 @@ author = "Anton, Ste7an"
 
 #extensions = ["sphinx.ext.autodoc", 'sphinx_sitemap', 'sphinx.ext.napoleon']
 extensions = ["sphinx.ext.autodoc", 'sphinx.ext.napoleon', 'sphinx.ext.autosummary']
-autodoc_mock_imports = ["utime","uos","machine","busio","board","pybricks"]
+autodoc_mock_imports = ["utime","uos","machine","busio","board","pybricks","micropython","ubluetooth","ustruct"]
 highlight_language = 'python3'
 
 # templates_path = ["_templates"]
