@@ -10,6 +10,11 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.11"
+  jobs:
+    # Always document the tip of each submodule's tracked branch
+    # (main/master), not the SHA pinned in this repo.
+    post_checkout:
+      - git submodule update --init --remote --recursive
 
 # Build documentation in the docs/ directory with Sphinx
 sphinx:

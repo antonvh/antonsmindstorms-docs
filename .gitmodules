@@ -1,30 +1,40 @@
 [submodule "docs/source/Software/mpy-robot-tools"]
 	path = docs/source/Software/mpy-robot-tools
 	url = https://github.com/antonvh/mpy-robot-tools
+	branch = master
 [submodule "docs/source/Software/PyHuskyLens"]
 	path = docs/source/Software/PyHuskyLens
 	url = https://github.com/antonvh/PyHuskyLens
+	branch = master
 [submodule "docs/source/Software/PUPRemote"]
 	path = docs/source/Software/PUPRemote
 	url = https://github.com/antonvh/PUPRemote
+	branch = main
 [submodule "docs/source/Software/SerialTalk"]
 	path = docs/source/Software/SerialTalk
 	url = https://github.com/antonvh/SerialTalk
+	branch = master
 [submodule "docs/source/Software/micropup"]
 	path = docs/source/Software/micropup
 	url = https://github.com/ste7anste7an/micropup
+	branch = main
 [submodule "docs/source/Software/btbricks"]
 	path = docs/source/Software/btbricks
 	url = https://github.com/antonvh/btbricks
+	branch = main
 [submodule "docs/source/Software/rcservo"]
 	path = docs/source/Software/rcservo
 	url = https://github.com/antonvh/rcservo
+	branch = main
 [submodule "docs/source/Software/np_animation"]
 	path = docs/source/Software/np_animation
 	url = https://github.com/antonvh/np_animation
+	branch = main
 [submodule "docs/source/Software/lms-line-sensor"]
 	path = docs/source/Software/lms-line-sensor
 	url = https://github.com/AntonsMindstorms/lms-line-sensor
+	branch = main
 [submodule "docs/source/Software/uRemote"]
 	path = docs/source/Software/uRemote
 	url = https://github.com/AntonsMindstorms/uRemote
+	branch = main

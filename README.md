@@ -7,11 +7,19 @@ Please fork this repository and add to it with pull requests. You will be helpin
 ## Set up local environment
 
 ```
-git clone https://github.com/antonvh/antonsmindstorms-docs
+git clone --recurse-submodules https://github.com/antonvh/antonsmindstorms-docs
 cd antonsmindstorms-docs
+# Always use --remote so submodules track latest main/master (not pinned SHAs)
+git submodule update --init --remote --recursive
 pipenv shell
 cd docs
 make html # builds the docs
+```
+
+Update all software libraries to the tip of their tracked branch:
+
+```
+git submodule update --remote --recursive
 ```
 
 ## Guidelines
